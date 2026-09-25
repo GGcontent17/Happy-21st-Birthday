@@ -206,9 +206,8 @@
 <div class="gate" id="gate">
   <div class="gate-card">
     <div class="gate-eyebrow">private letter</div>
-    <h2>Enter your birthday to open</h2>
-    <p>Only you know this one, cubby.</p>
-    <input type="text" class="gate-input" id="gateInput" placeholder="MM / DD" inputmode="numeric" maxlength="5">
+    <h2>Enter your phone password</h2>
+    <input type="text" class="gate-input" id="gateInput" placeholder="••••" inputmode="numeric" maxlength="5">
     <button class="gate-btn" onclick="checkGate()">Unlock</button>
     <div class="gate-error" id="gateError">Not quite, bossing wants to try again 🐻</div>
   </div>
@@ -247,7 +246,7 @@
   function checkGate(){
     const val = document.getElementById('gateInput').value.replace(/[^0-9]/g, '');
     // accept 1003, 10-03, october 3 in digit form (MMDD)
-    if(val === '1003' || val === '0310'){
+    if(val === '2005'){
       document.getElementById('gate').classList.add('hidden');
       document.getElementById('mainContent').style.display = 'flex';
     } else {
